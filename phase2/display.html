@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Properties</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 24px;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    
+    .block-box {
+      display: block;
+      background: #d0e8ff;
+      padding: 12px;
+      margin-bottom: 8px;
+    }
+
+    
+    .inline-box {
+      display: inline;
+      background: #ffd6a5;
+      padding: 4px 8px;
+    }
+
+    
+    .inline-block-box {
+      display: inline-block;
+      background: #caffbf;
+      padding: 12px;
+      width: 120px;
+      margin-right: 8px;
+    }
+
+    
+    .flex-container {
+      display: flex;
+      gap: 8px;
+      background: #f0e0ff;
+      padding: 12px;
+    }
+    .flex-item {
+      background: #c084fc;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 4px;
+    }
+
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      background: #ffe0e0;
+      padding: 12px;
+    }
+    .grid-item {
+      background: #f87171;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    
+    .none-box {
+      display: none;
+    }
+
+    .section {
+      margin-bottom: 28px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h2>display: block</h2>
+    <div class="block-box">Block element — full width</div>
+    <div class="block-box">Another block — starts on a new line</div>
+  </div>
+
+  <div class="section">
+    <h2>display: inline</h2>
+    <p>
+      Normal text with
+      <span class="inline-box">inline span</span>
+      and more text flowing alongside it.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>display: inline-block</h2>
+    <div class="inline-block-box">Box 1</div>
+    <div class="inline-block-box">Box 2</div>
+    <div class="inline-block-box">Box 3</div>
+  </div>
+
+  <div class="section">
+    <h2>display: flex</h2>
+    <div class="flex-container">
+      <div class="flex-item">Flex A</div>
+      <div class="flex-item">Flex B</div>
+      <div class="flex-item">Flex C</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>display: grid</h2>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>display: none</h2>
+    <div class="none-box">You can't see me!</div>
+    <p style="color: #888; font-size: 14px;">Nothing is visible above — the element exists in the code but is hidden.</p>
+  </div>
+
+</body>
+</html>

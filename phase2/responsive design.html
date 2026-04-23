@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- Viewport Meta Tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Profile Card</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f0f0f0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Profile Box */
+.profile{
+    width:300px;
+    background:white;
+    border:2px solid black;
+    padding:20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flex items */
+.profile img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.profile h2{
+    margin:10px 0;
+}
+
+.profile p{
+    padding:10px;
+    background:#e8e8e8;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+    .profile{
+        width: 90%;
+        padding:15px;
+    }
+
+    .profile img{
+        width:80px;
+        height:80px;
+    }
+}
+
+/* Tablet (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .profile{
+        width: 400px;
+    }
+}
+
+/* Desktop (901px and above) */
+@media (min-width: 901px) {
+    .profile{
+        width: 500px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="profile">
+    <img src="picture.jpg" alt="Profile">
+    <h2>Thanha Fathima</h2>
+    <p>BCA Student</p>
+</div>
+
+</body>
+</html>

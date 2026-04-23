@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Responsive Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#333;
+    padding:15px;
+}
+
+.logo{
+    color:white;
+    font-size:20px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin:0 10px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+}
+
+
+.hero{
+    text-align:center;
+    padding:50px;
+    background:#f4f4f4;
+}
+
+
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.box{
+    background:teal;
+    color:white;
+    margin:10px;
+    padding:20px;
+    width:250px;
+    text-align:center;
+}
+
+
+.form-section{
+    padding:20px;
+    display:flex;
+    justify-content:center;
+}
+
+form{
+    background:#eee;
+    padding:20px;
+    width:300px;
+    display:flex;
+    flex-direction:column;
+}
+
+form input, form textarea{
+    margin:10px 0;
+    padding:10px;
+}
+
+form button{
+    padding:10px;
+    background:#333;
+    color:white;
+    border:none;
+}
+
+
+
+
+@media(max-width:600px){
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+@media(min-width:601px) and (max-width:900px){
+    .box{
+        width:45%;
+    }
+}
+
+
+@media(min-width:901px){
+    .box{
+        width:30%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="navbar">
+    <div class="logo">MySite</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="mini 3.html">login</a></li>
+        <li><a href="mini 2.html">Contact</a></li>
+    </ul>
+</div>
+
+<div class="hero">
+    <h1>Welcome to Don bosco college</h1>
+    <p>Simple Responsive Design</p>
+</div>
+
+
+<div class="container">
+    <div class="box">BCA</div>
+    <div class="box">BCOM</div>
+    <div class="box">BBA</div>
+</div>
+
+
+<div class="form-section">
+    <form>
+        <h3>Contact Form</h3>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
