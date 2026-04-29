@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Preview</title>
+</head>
+<body>
+
+  <h2>Type something:</h2>
+
+  <input type="text" id="inputBox" oninput="showPreview()" placeholder="Start typing...">
+
+  <h3>Preview:</h3>
+  <p id="previewText"></p>
+
+  <script>
+    function showPreview() {
+      let input = document.getElementById("inputBox").value;
+      document.getElementById("previewText").innerHTML = input;
+    }
+  </script>
+
+</body>
+</html>

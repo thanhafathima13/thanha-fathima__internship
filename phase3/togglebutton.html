@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Toggle Button</h3>
+
+<button onclick="toggle()">ON</button>
+
+<script>
+function toggle() {
+  let btn = document.querySelector("button");
+
+  if (btn.textContent === "ON") {
+    btn.textContent = "OFF";
+  } else {
+    btn.textContent = "ON";
+  }
+}
+</script>
+
+</body>
+</html>

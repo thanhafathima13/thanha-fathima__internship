@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.done { text-decoration: line-through; color: gray; }
+</style>
+</head>
+<body>
+
+<h3>To-Do List</h3>
+
+<input type="text" id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<script>
+function addTask() {
+  let input = document.getElementById("taskInput");
+
+  let li = document.createElement("li");
+  li.textContent = input.value;
+
+  // Mark as done
+  li.onclick = function() {
+    li.classList.toggle("done");
+  };
+
+  // Delete button
+  let btn = document.createElement("button");
+  btn.textContent = "❌";
+  btn.onclick = function() {
+    li.remove();
+  };
+
+  li.appendChild(btn);
+
+  document.getElementById("taskList").appendChild(li);
+
+  input.value = "";
+}
+</script>
+
+</body>
+</html>
